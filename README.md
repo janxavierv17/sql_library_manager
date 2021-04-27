@@ -1,4 +1,3 @@
-# sql_library_manager
 <h1>Project - SQL Libray Manager</h1> <br/>
 
 Please run the following line of codes in your terminal: <br/>
