@@ -1,0 +1,31 @@
+{
+  "name": "sql_library_manager-v1",
+  "version": "1.0.0",
+  "description": "An application for my local library to help me manage my collection of books.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janxavierv17/sql_library_manager.git"
+  },
+  "keywords": [
+    "SQL",
+    "Sequelize",
+    "Node.JS",
+    "Express.js",
+    "PUG/Jade",
+    "Templating",
+    "JavaScript"
+  ],
+  "author": "Jan Xavier Virgen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/janxavierv17/sql_library_manager/issues"
+  },
+  "homepage": "https://github.com/janxavierv17/sql_library_manager#readme",
+  "dependencies": {
+    "sqlite3": "^5.0.2"
+  }
+}
