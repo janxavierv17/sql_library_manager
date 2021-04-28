@@ -14,6 +14,19 @@ a {
     color: black;
   }
 
+.features{
+  display:flex;
+  align-items: flex-start;
+}
+.createBook{
+  margin:20px 35% 20px 0
+}
+table{
+  width:100%;
+}
+span{
+  margin: 3px;
+}
 a.button, input[type=submit] {
   color: white;
   background: #019875;
@@ -22,6 +35,26 @@ a.button, input[type=submit] {
   font-size: 14px;
   border-radius: 2px;
   cursor: pointer;
+
+}
+.search{
+  padding: 10px 14px 12px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+  border: none;
+  border: 1px solid #ccc;
+}
+button {
+  background-color: #019875;
+  border: none;
+  color: white;
+  padding: 10px 14px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
 form a.button, input[type=submit] {

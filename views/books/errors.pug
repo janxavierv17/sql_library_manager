@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title Page Not Found
+    link(rel='stylesheet' href='/stylesheets/style.css')
+  body
+  if(errors)
+    h1.error= "Oooops!"
+    ul.error
+      each error in errors
+        if(error)
+          li= error.message
+        //- else
+        //-   p Something went wrong.
+  if(error)
+    p= errors.message
+    a.button(href="/books/new") Create here.

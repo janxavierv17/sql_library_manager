@@ -1,0 +1,33 @@
+extends Layout
+
+block content
+    div.features
+        p.createBook
+            a.button(href="/books/new") Create New Book
+        form(action='/books', method='post')
+            input.search(type="text", name="search",placeholder="Search ...")
+            button.button(type="submit")= 'Submit'
+
+    table
+        thead
+            tr
+                th Title
+                th Author
+                th Genre
+                th Year
+        tbody
+            each book in books
+                tr
+                    td 
+                        a(href="/books/" + book.id)= book.title 
+                    td= book.author
+                    td= book.genre 
+                    td= book.year
+
+    - var page = 1;
+        br
+        ul
+            while page <= pagination 
+                span
+                    a(class="button", href=`${page}`)= page++ 
+                
