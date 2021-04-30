@@ -29,8 +29,8 @@ router.get("/page/:page", asyncHandler(async (req, res) => {
         return numberOfItems;
     })
     const limitBooks = await Book.findAll({
-        offset: (req.params.page - 1) * 7,
-        limit: 7
+        offset: (req.params.page - 1) * 5,
+        limit: 5
     })
     res.render("books/index", { books: limitBooks, pagination: pagination })
 }))

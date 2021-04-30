@@ -4,7 +4,7 @@ html
     title Page Not Found
     link(rel='stylesheet' href='/stylesheets/style.css')
   body
-    h1= errors.status + " Page not found."
-    p= errors.message
+    h1= error.status + " Page not found."
+    p= error.message
     p
       a.button(href='/') Home

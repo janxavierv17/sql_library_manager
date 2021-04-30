@@ -39,9 +39,6 @@ app.use((req, res, next) => {
     next(err)
 })
 
-app.use((req, res, next) => {
-    res.render("page-not-found", { error: err })
-})
 
 // error handler
 app.use((err, req, res, next) => {
@@ -57,7 +54,7 @@ app.use((err, req, res, next) => {
         res.locals.error = req.app.get('env') === 'development' ? err : {};
 
         // render the error page
-        res.render('books/errors', { errors: err });
+        res.render('books/error', { errors: err });
     }
 
 });
