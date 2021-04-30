@@ -8,7 +8,7 @@ const sequelize = require("./models/index").sequelize;
     try {
         await sequelize.authenticate();
         await sequelize.sync();
-        console.log("Connection to the database successful!");
+        console.log("You're Connected to the database. Please use localhost:3000");
     } catch (error) {
         console.error("Error connecting to the database: ", error);
     }
