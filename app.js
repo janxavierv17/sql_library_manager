@@ -1,20 +1,26 @@
 const express = require("express")
 const path = require("path")
 const cookieParser = require("cookie-parser")
-const logger = require('morgan');
-const routes = require("./routes/index")
-const books = require("./routes/books")
+const logger = require('morgan')
+const sequelize = require("./models/index").sequelize;
 
-
-const app = express();
 (async () => {
     try {
         await sequelize.authenticate();
-        console.log('Connection has been established successfully.');
+        await sequelize.sync();
+        console.log("Connection to the database successful!");
     } catch (error) {
-        console.error('Unable to connect to the database:', error);
+        console.error("Error connecting to the database: ", error);
     }
-})
+})();
+
+const routes = require("./routes/index")
+const books = require("./routes/books");
+
+
+const app = express();
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
