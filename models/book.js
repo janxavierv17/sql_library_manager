@@ -24,19 +24,9 @@ module.exports = (sequelize) => {
         },
         genre: {
             type: Sequelize.STRING,
-            validate: {
-                notEmpty: {
-                    msg: 'Genre is required.'
-                }
-            }
         },
         year: {
-            type: Sequelize.STRING,
-            validate: {
-                notEmpty: {
-                    msg: 'year publised is required.'
-                }
-            }
+            type: Sequelize.INTEGER,
         },
     }, { sequelize })
     return Book;
